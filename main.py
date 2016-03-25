@@ -74,11 +74,11 @@ class VanStockChecker():
     def search_parts(self, *args):
         result = []
         try:
-            with open('engineers.csv', 'rb') as csv_engineers:
-                temp = csv.reader(csv_engineers, delimiter=',')
+            with open('locations.csv', 'rb') as csv_locations:
+                temp = csv.reader(csv_locations, delimiter=',')
                 holding_locations = dict(temp)
         except IOError:
-            self.error_message("Error: No engineer list as 'engineers.csv'.")
+            self.error_message("Error: No location list as 'locations.csv'.")
         try:
             with open('areas.csv', 'rb') as csv_areas:
                 temp = csv.reader(csv_areas, delimiter=',')
